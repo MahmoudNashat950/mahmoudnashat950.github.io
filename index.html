@@ -436,149 +436,370 @@
   </div>
 </section>
 
-  <!-- CASE STUDIES -->
-  <section id="case-studies">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Case studies</h2>
-        <p>A closer look at how the two flagship projects were scoped, architected, and evaluated.</p>
+ <!-- CASE STUDIES -->
+<section id="case-studies">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Case studies</h2>
+      <p>
+        A closer look at how I approach real engineering problems — from
+        defining the solution to designing the architecture, building the
+        system, and evaluating the result.
+      </p>
+    </div>
+
+    <!-- RETAIL ANALYTICS COPILOT -->
+    <article class="case-study reveal" id="case-copilot">
+      <div class="case-head">
+        <div>
+          <span class="project-flag">Featured case study</span>
+          <h3>Retail Analytics Copilot</h3>
+          <p class="project-subtitle">Hybrid RAG + SQL AI agent</p>
+        </div>
+
+        <a
+          class="btn btn-secondary btn-sm"
+          href="https://github.com/MahmoudNashat950/-Retail-Analytics-Copilot-DSPy-LangGraph-"
+          target="_blank"
+          rel="noopener"
+        >
+          View repository
+        </a>
       </div>
 
-      <article class="case-study reveal" id="case-copilot">
-        <div class="case-head">
-          <div>
-            <h3>Retail Analytics Copilot</h3>
-            <p class="project-subtitle">Hybrid RAG + SQL AI agent</p>
-          </div>
-          <a class="btn btn-secondary btn-sm" href="https://github.com/MahmoudNashat950/-Retail-Analytics-Copilot-DSPy-LangGraph-" target="_blank" rel="noopener">View repository</a>
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">01</span>
+          <h4>The problem</h4>
         </div>
 
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">01</span><h4>Problem</h4></div>
-          <p>Business teams often need answers that live in two different places at once &mdash; unstructured knowledge like product docs and policies, and structured data like sales tables. Getting an answer usually means knowing which tool to use, then writing the search or the SQL query by hand.</p>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">02</span><h4>Solution</h4></div>
-          <p>I built an agent that reads the question, decides whether it needs retrieval, SQL, or both, and plans the steps to answer it &mdash; including repairing its own SQL when a query fails, and synthesizing a final answer with a confidence score and citations.</p>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">03</span><h4>Architecture</h4></div>
-          <div class="arch-diagram">
-            <div class="arch-node">User question</div>
-            <div class="arch-arrow">&#8595;</div>
-            <div class="arch-node">Query router &amp; planner</div>
-            <div class="arch-arrow">&#8595;</div>
-            <div class="arch-branch-label">Router chooses one or both paths</div>
-            <div class="arch-branch">
-              <div class="arch-node gold">RAG retrieval<span class="arch-note">Embeddings + TF-IDF</span></div>
-              <div class="arch-node teal">SQL generation<span class="arch-note">NL &rarr; SQL + repair loop</span></div>
-            </div>
-            <div class="arch-arrow">&#8595;</div>
-            <div class="arch-node">Execution &amp; answer synthesis</div>
-            <div class="arch-arrow">&#8595;</div>
-            <div class="arch-node">Validated answer
-              <div class="arch-tags">
-                <span class="tech-badge">Confidence score</span><span class="tech-badge">Citations</span><span class="tech-badge">JSON trace</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">04</span><h4>Technologies</h4></div>
-          <div class="tech-row">
-            <span class="tech-badge">Python</span><span class="tech-badge">LangGraph</span><span class="tech-badge">DSPy</span><span class="tech-badge">RAG</span><span class="tech-badge">SQL</span><span class="tech-badge">SQLite</span><span class="tech-badge">TF-IDF</span><span class="tech-badge">LLMs</span>
-          </div>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">05</span><h4>Engineering highlights</h4></div>
-          <ul>
-            <li>Intelligent query routing between RAG, SQL, and hybrid workflows</li>
-            <li>Multi-step planning before execution</li>
-            <li>Natural-language-to-SQL generation with an automatic repair loop on failed queries</li>
-            <li>Answer synthesis with citations and a confidence score</li>
-            <li>Full JSON execution traces for every run</li>
-            <li>A structured evaluation workflow for measuring accuracy</li>
-          </ul>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">06</span><h4>Results</h4></div>
-          <div class="metric-row">
-            <div class="metric-card">
-              <div class="metric-value">100%</div>
-              <div class="metric-label">Format-adherence accuracy across 7 DSPy test cases</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-value">6 / 6</div>
-              <div class="metric-label">Evaluation questions answered correctly</div>
-            </div>
-          </div>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">07</span><h4>GitHub</h4></div>
-          <a class="btn btn-primary btn-sm" href="https://github.com/MahmoudNashat950/-Retail-Analytics-Copilot-DSPy-LangGraph-" target="_blank" rel="noopener">View repository</a>
-        </div>
-      </article>
+        <p>
+          Business questions can require information from different sources.
+          Some answers live in unstructured knowledge such as product
+          documentation and policies, while others require querying structured
+          sales data. Switching between tools and writing queries manually
+          makes this process slower and harder to scale.
+        </p>
+      </div>
 
-      <article class="case-study reveal" id="case-warehouse">
-        <div class="case-head">
-          <div>
-            <h3>Data Warehouse &amp; Analytics</h3>
-            <p class="project-subtitle">SQL Server medallion data warehouse</p>
-          </div>
-          <a class="btn btn-secondary btn-sm" href="https://github.com/MahmoudNashat950/sql-data-warehouse-project" target="_blank" rel="noopener">View repository</a>
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">02</span>
+          <h4>The solution</h4>
         </div>
 
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">01</span><h4>Problem</h4></div>
-          <p>Raw ERP and CRM exports arrive as inconsistent CSV files &mdash; different naming, formats, and quality &mdash; which makes them unreliable to analyze directly.</p>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">02</span><h4>Solution</h4></div>
-          <p>I designed a medallion architecture that ingests the raw files, cleans and standardizes them, and models the result into a star schema, so downstream analytics queries stay simple and fast.</p>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">03</span><h4>Architecture</h4></div>
-          <div class="arch-pipeline">
-            <div class="arch-node">Source files<span class="arch-note">ERP + CRM CSV</span></div>
-            <div class="arch-pipeline-arrow">&#8594;</div>
-            <div class="arch-node bronze">Bronze<span class="arch-note">Raw ingestion</span></div>
-            <div class="arch-pipeline-arrow">&#8594;</div>
-            <div class="arch-node silver">Silver<span class="arch-note">Cleansing &amp; transform</span></div>
-            <div class="arch-pipeline-arrow">&#8594;</div>
-            <div class="arch-node gold">Gold<span class="arch-note">Analytical layer</span></div>
-            <div class="arch-pipeline-arrow">&#8594;</div>
-            <div class="arch-node">Analytics<span class="arch-note">Star schema</span></div>
-          </div>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">04</span><h4>Technologies</h4></div>
-          <div class="tech-row">
-            <span class="tech-badge">SQL Server</span><span class="tech-badge">T-SQL</span><span class="tech-badge">ETL</span><span class="tech-badge">Data modeling</span><span class="tech-badge">Data warehousing</span>
-          </div>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">05</span><h4>Engineering highlights</h4></div>
-          <ul>
-            <li>Bronze layer for raw, unmodified ingestion</li>
-            <li>Silver layer for cleansing, standardization, and transformation</li>
-            <li>Gold layer as the analytical, query-ready layer</li>
-            <li>Data validation rules across the pipeline</li>
-            <li>Star schema with fact and dimension tables</li>
-            <li>Documented data catalog and consistent naming conventions</li>
-          </ul>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">06</span><h4>Results</h4></div>
-          <p>The outcome is a documented, query-ready warehouse: a full data catalog, consistent naming conventions, and analytics-ready Gold-layer tables built on fact and dimension models &mdash; all available in the repository.</p>
-        </div>
-        <div class="case-block">
-          <div class="case-block-head"><span class="case-num">07</span><h4>GitHub</h4></div>
-          <a class="btn btn-primary btn-sm" href="https://github.com/MahmoudNashat950/sql-data-warehouse-project" target="_blank" rel="noopener">View repository</a>
-        </div>
-      </article>
-    </div>
-  </section>
+        <p>
+          I built a natural-language analytics assistant that determines how
+          each question should be answered. It can use RAG, SQL, or both,
+          while handling planning, SQL execution, query repair, answer
+          synthesis, and confidence scoring as part of the workflow.
+        </p>
+      </div>
 
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">03</span>
+          <h4>Architecture</h4>
+        </div>
+
+        <div class="arch-diagram">
+          <div class="arch-node">Business question</div>
+
+          <div class="arch-arrow">&#8595;</div>
+
+          <div class="arch-node">
+            Query router &amp; planner
+          </div>
+
+          <div class="arch-arrow">&#8595;</div>
+
+          <div class="arch-branch-label">
+            Router chooses one or both paths
+          </div>
+
+          <div class="arch-branch">
+            <div class="arch-node gold">
+              RAG retrieval
+              <span class="arch-note">Embeddings + TF-IDF</span>
+            </div>
+
+            <div class="arch-node teal">
+              SQL generation
+              <span class="arch-note">NL &rarr; SQL + repair loop</span>
+            </div>
+          </div>
+
+          <div class="arch-arrow">&#8595;</div>
+
+          <div class="arch-node">
+            Execution &amp; answer synthesis
+          </div>
+
+          <div class="arch-arrow">&#8595;</div>
+
+          <div class="arch-node">
+            Validated answer
+
+            <div class="arch-tags">
+              <span class="tech-badge">Confidence score</span>
+              <span class="tech-badge">Citations</span>
+              <span class="tech-badge">JSON trace</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">04</span>
+          <h4>Technologies</h4>
+        </div>
+
+        <div class="tech-row">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">LangGraph</span>
+          <span class="tech-badge">DSPy</span>
+          <span class="tech-badge">RAG</span>
+          <span class="tech-badge">SQL</span>
+          <span class="tech-badge">SQLite</span>
+          <span class="tech-badge">TF-IDF</span>
+          <span class="tech-badge">LLMs</span>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">05</span>
+          <h4>Engineering highlights</h4>
+        </div>
+
+        <ul>
+          <li>
+            Intelligent routing between RAG, SQL, and hybrid workflows
+          </li>
+          <li>
+            Multi-step planning before execution
+          </li>
+          <li>
+            Natural-language-to-SQL generation with an automatic repair loop
+          </li>
+          <li>
+            Answer synthesis with citations and confidence scoring
+          </li>
+          <li>
+            Structured JSON execution traces for every run
+          </li>
+          <li>
+            Evaluation workflow for measuring system accuracy
+          </li>
+        </ul>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">06</span>
+          <h4>Evaluation &amp; results</h4>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric-card">
+            <div class="metric-value">100%</div>
+            <div class="metric-label">
+              Format-adherence accuracy across 7 DSPy test cases
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-value">6 / 6</div>
+            <div class="metric-label">
+              Evaluation questions answered correctly
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">07</span>
+          <h4>Repository</h4>
+        </div>
+
+        <a
+          class="btn btn-primary btn-sm"
+          href="https://github.com/MahmoudNashat950/-Retail-Analytics-Copilot-DSPy-LangGraph-"
+          target="_blank"
+          rel="noopener"
+        >
+          View repository
+        </a>
+      </div>
+    </article>
+
+    <!-- DATA WAREHOUSE -->
+    <article class="case-study reveal" id="case-warehouse">
+      <div class="case-head">
+        <div>
+          <span class="project-flag">Data engineering case study</span>
+          <h3>Data Warehouse &amp; Analytics</h3>
+          <p class="project-subtitle">SQL Server medallion data warehouse</p>
+        </div>
+
+        <a
+          class="btn btn-secondary btn-sm"
+          href="https://github.com/MahmoudNashat950/sql-data-warehouse-project"
+          target="_blank"
+          rel="noopener"
+        >
+          View repository
+        </a>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">01</span>
+          <h4>The problem</h4>
+        </div>
+
+        <p>
+          Raw ERP and CRM exports often arrive as separate CSV files with
+          inconsistent naming, formats, and data quality. Working directly
+          with these files makes reliable analysis difficult and creates
+          unnecessary complexity for downstream queries.
+        </p>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">02</span>
+          <h4>The solution</h4>
+        </div>
+
+        <p>
+          I designed a medallion data architecture that separates raw
+          ingestion, data transformation, and analytics. The pipeline cleans
+          and standardizes the source data before modeling it into a
+          query-ready star schema.
+        </p>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">03</span>
+          <h4>Architecture</h4>
+        </div>
+
+        <div class="arch-pipeline">
+          <div class="arch-node">
+            Source files
+            <span class="arch-note">ERP + CRM CSV</span>
+          </div>
+
+          <div class="arch-pipeline-arrow">&#8594;</div>
+
+          <div class="arch-node bronze">
+            Bronze
+            <span class="arch-note">Raw ingestion</span>
+          </div>
+
+          <div class="arch-pipeline-arrow">&#8594;</div>
+
+          <div class="arch-node silver">
+            Silver
+            <span class="arch-note">Cleansing &amp; transform</span>
+          </div>
+
+          <div class="arch-pipeline-arrow">&#8594;</div>
+
+          <div class="arch-node gold">
+            Gold
+            <span class="arch-note">Analytical layer</span>
+          </div>
+
+          <div class="arch-pipeline-arrow">&#8594;</div>
+
+          <div class="arch-node">
+            Analytics
+            <span class="arch-note">Star schema</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">04</span>
+          <h4>Technologies</h4>
+        </div>
+
+        <div class="tech-row">
+          <span class="tech-badge">SQL Server</span>
+          <span class="tech-badge">T-SQL</span>
+          <span class="tech-badge">ETL</span>
+          <span class="tech-badge">Data modeling</span>
+          <span class="tech-badge">Data warehousing</span>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">05</span>
+          <h4>Engineering highlights</h4>
+        </div>
+
+        <ul>
+          <li>
+            Bronze layer for raw, unmodified source ingestion
+          </li>
+          <li>
+            Silver layer for cleansing, standardization, and transformation
+          </li>
+          <li>
+            Gold layer for analytics-ready data
+          </li>
+          <li>
+            Data validation rules across the transformation pipeline
+          </li>
+          <li>
+            Star schema with fact and dimension tables
+          </li>
+          <li>
+            Documented data catalog and consistent naming conventions
+          </li>
+        </ul>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">06</span>
+          <h4>Outcome</h4>
+        </div>
+
+        <p>
+          The result is a documented, query-ready data warehouse with
+          structured Gold-layer tables, fact and dimension models, a data
+          catalog, and consistent naming conventions. The complete
+          implementation and documentation are available in the repository.
+        </p>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-head">
+          <span class="case-num">07</span>
+          <h4>Repository</h4>
+        </div>
+
+        <a
+          class="btn btn-primary btn-sm"
+          href="https://github.com/MahmoudNashat950/sql-data-warehouse-project"
+          target="_blank"
+          rel="noopener"
+        >
+          View repository
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
