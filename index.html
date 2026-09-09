@@ -682,47 +682,24 @@
         </p>
       </div>
 
-      <div class="case-block">
-        <div class="case-block-head">
-          <span class="case-num">03</span>
-          <h4>Architecture</h4>
-        </div>
+  <div class="case-block">
+  <div class="case-block-head">
+    <span class="case-num">03</span>
+    <h4>Architecture</h4>
+  </div>
 
-        <div class="arch-pipeline">
-          <div class="arch-node">
-            Source files
-            <span class="arch-note">ERP + CRM CSV</span>
-          </div>
+  <div class="architecture-image">
+    <img
+      src="assests/architecture.png"
+      alt="Data warehouse architecture showing ERP and CRM source data flowing through Bronze, Silver, and Gold layers into the analytical model"
+    >
+    <p class="architecture-caption">
+      Medallion data warehouse architecture showing the flow from ERP and CRM
+      source data through Bronze, Silver, and Gold layers into the analytical model.
+    </p>
+  </div>
+</div>
 
-          <div class="arch-pipeline-arrow">&#8594;</div>
-
-          <div class="arch-node bronze">
-            Bronze
-            <span class="arch-note">Raw ingestion</span>
-          </div>
-
-          <div class="arch-pipeline-arrow">&#8594;</div>
-
-          <div class="arch-node silver">
-            Silver
-            <span class="arch-note">Cleansing &amp; transform</span>
-          </div>
-
-          <div class="arch-pipeline-arrow">&#8594;</div>
-
-          <div class="arch-node gold">
-            Gold
-            <span class="arch-note">Analytical layer</span>
-          </div>
-
-          <div class="arch-pipeline-arrow">&#8594;</div>
-
-          <div class="arch-node">
-            Analytics
-            <span class="arch-note">Star schema</span>
-          </div>
-        </div>
-      </div>
 
       <div class="case-block">
         <div class="case-block-head">
