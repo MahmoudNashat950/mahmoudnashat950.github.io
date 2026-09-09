@@ -215,100 +215,226 @@
   </div>
 </section>
 
-  <!-- FEATURED PROJECTS -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Featured projects</h2>
-        <p>A selection of systems I've designed and built end to end, from raw data to a working, evaluated result.</p>
+<!-- FEATURED PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Selected work</h2>
+      <p>
+        A selection of systems I've designed and built end to end, focused on
+        AI, data engineering, analytics, and practical business use cases.
+      </p>
+    </div>
+
+    <!-- HERO PROJECT -->
+    <div class="project-hero-card reveal">
+      <div class="project-hero-copy">
+        <span class="project-flag">Featured project</span>
+        <h3>Retail Analytics Copilot</h3>
+        <p class="project-subtitle">Hybrid RAG + SQL AI agent</p>
+
+        <p class="project-desc">
+          A natural-language analytics assistant that lets users ask business
+          questions in plain English. It routes each question to RAG, SQL, or
+          a hybrid workflow, then plans, executes, repairs SQL, and produces
+          a validated answer with a confidence score.
+        </p>
+
+        <div class="tech-row">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">LangGraph</span>
+          <span class="tech-badge">DSPy</span>
+          <span class="tech-badge">RAG</span>
+          <span class="tech-badge">SQL</span>
+          <span class="tech-badge">SQLite</span>
+          <span class="tech-badge">TF-IDF</span>
+          <span class="tech-badge">LLMs</span>
+        </div>
+
+        <div class="project-links">
+          <a class="btn btn-primary btn-sm" href="#case-copilot">
+            Read case study
+          </a>
+          <a
+            class="btn btn-secondary btn-sm"
+            href="https://github.com/MahmoudNashat950/-Retail-Analytics-Copilot-DSPy-LangGraph-"
+            target="_blank"
+            rel="noopener"
+          >
+            View on GitHub
+          </a>
+        </div>
       </div>
 
-      <div class="project-hero-card reveal">
-        <div class="project-hero-copy">
-          <span class="project-flag">Hero project</span>
-          <h3>Retail Analytics Copilot</h3>
-          <p class="project-subtitle">Hybrid RAG + SQL AI agent</p>
-          <p class="project-desc">A natural-language analytics assistant that routes business questions between RAG, SQL, or a hybrid workflow &mdash; then plans, executes, repairs its own SQL, and synthesizes a validated answer with a confidence score.</p>
-          <div class="tech-row">
-            <span class="tech-badge">Python</span><span class="tech-badge">LangGraph</span><span class="tech-badge">DSPy</span><span class="tech-badge">RAG</span><span class="tech-badge">SQL</span><span class="tech-badge">SQLite</span><span class="tech-badge">TF-IDF</span><span class="tech-badge">LLMs</span>
-          </div>
-          <div class="project-links">
-            <a class="btn btn-primary btn-sm" href="#case-copilot">Read case study</a>
-            <a class="btn btn-secondary btn-sm" href="https://github.com/MahmoudNashat950/-Retail-Analytics-Copilot-DSPy-LangGraph-" target="_blank" rel="noopener">View on GitHub</a>
-          </div>
+      <div class="project-hero-visual">
+        <div class="hero-visual-label">
+          <span>copilot.architecture</span>
+          <span>01&ndash;07</span>
         </div>
-        <div class="project-hero-visual">
-          <div class="hero-visual-label">
-            <span>case_study.architecture</span>
-            <span>01&ndash;07</span>
+
+        <div class="mini-flow">
+          <div class="mini-flow-node">Business question</div>
+          <div class="mini-flow-arrow">&#8595;</div>
+
+          <div class="mini-flow-node">Router &amp; planner</div>
+          <div class="mini-flow-arrow">&#8595;</div>
+
+          <div class="mini-flow-branch">
+            <div class="mini-flow-node gold">RAG</div>
+            <div class="mini-flow-node teal">SQL</div>
           </div>
-          <div class="mini-flow">
-            <div class="mini-flow-node">Question</div>
-            <div class="mini-flow-arrow">&#8595;</div>
-            <div class="mini-flow-node">Router &rarr; plan</div>
-            <div class="mini-flow-arrow">&#8595;</div>
-            <div class="mini-flow-branch">
-              <div class="mini-flow-node gold">RAG</div>
-              <div class="mini-flow-node teal">SQL</div>
-            </div>
-            <div class="mini-flow-arrow">&#8595;</div>
-            <div class="mini-flow-node">Execute &amp; synthesize</div>
-          </div>
-          <div class="hero-visual-foot">Full architecture and results below</div>
+
+          <div class="mini-flow-arrow">&#8595;</div>
+          <div class="mini-flow-node">Execute &amp; validate</div>
+
+          <div class="mini-flow-arrow">&#8595;</div>
+          <div class="mini-flow-node">Answer + confidence</div>
         </div>
-      </div>
 
-      <div class="projects-grid">
-        <article class="project-card reveal">
-          <span class="project-flag">Second project</span>
-          <h3>Data Warehouse &amp; Analytics</h3>
-          <p class="project-subtitle">SQL Server medallion data warehouse</p>
-          <p class="project-desc">A Bronze/Silver/Gold data warehouse that ingests ERP and CRM CSV data and models it into a star schema ready for analytics.</p>
-          <div class="tech-row">
-            <span class="tech-badge">SQL Server</span><span class="tech-badge">T-SQL</span><span class="tech-badge">ETL</span><span class="tech-badge">Data modeling</span><span class="tech-badge">Data warehousing</span>
-          </div>
-          <div class="project-links">
-            <a class="btn btn-primary btn-sm" href="#case-warehouse">Read case study</a>
-            <a class="btn btn-secondary btn-sm" href="https://github.com/MahmoudNashat950/sql-data-warehouse-project" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <h3>Credit Card Fraud Detection</h3>
-          <p class="project-desc">A machine learning pipeline for detecting fraudulent transactions, built around class-imbalance handling and careful model evaluation.</p>
-          <div class="tech-row">
-            <span class="tech-badge">Python</span><span class="tech-badge">Pandas</span><span class="tech-badge">NumPy</span><span class="tech-badge">Scikit-learn</span><span class="tech-badge">Matplotlib</span>
-          </div>
-          <div class="project-links">
-            <a class="btn btn-secondary btn-sm" href="https://github.com/MahmoudNashat950/credit_fraud_project" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <h3>NYC Taxi Trip Duration Prediction</h3>
-          <p class="project-desc">A regression pipeline that predicts NYC taxi trip duration from engineered spatial and temporal features.</p>
-          <div class="tech-row">
-            <span class="tech-badge">Python</span><span class="tech-badge">Pandas</span><span class="tech-badge">NumPy</span><span class="tech-badge">Scikit-learn</span><span class="tech-badge">Matplotlib</span>
-          </div>
-          <div class="project-links">
-            <a class="btn btn-secondary btn-sm" href="https://github.com/MahmoudNashat950/Kaggle-New-York-City-Taxi-Trip-Duration" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <h3>Marketplace Platform</h3>
-          <p class="project-desc">A full-stack marketplace with a clean-architecture .NET Web API and a React frontend &mdash; covering auth, JWT, and a relational data layer.</p>
-          <div class="tech-row">
-            <span class="tech-badge">C#</span><span class="tech-badge">ASP.NET Core</span><span class="tech-badge">SQL Server</span><span class="tech-badge">EF Core</span><span class="tech-badge">JWT</span><span class="tech-badge">React</span>
-          </div>
-          <div class="project-links">
-            <a class="btn btn-secondary btn-sm" href="https://github.com/MahmoudNashat950/MarketplaceBackend" target="_blank" rel="noopener">Backend</a>
-            <a class="btn btn-secondary btn-sm" href="https://github.com/MahmoudNashat950/Ecommerce-frontend" target="_blank" rel="noopener">Frontend</a>
-          </div>
-        </article>
+        <div class="hero-visual-foot">
+          Architecture, evaluation, and engineering details below
+        </div>
       </div>
     </div>
-  </section>
+
+    <!-- OTHER PROJECTS -->
+    <div class="projects-grid">
+
+      <article class="project-card reveal">
+        <span class="project-flag">Data engineering</span>
+        <h3>Data Warehouse &amp; Analytics</h3>
+        <p class="project-subtitle">SQL Server medallion data warehouse</p>
+
+        <p class="project-desc">
+          A Bronze/Silver/Gold data warehouse that ingests ERP and CRM data,
+          cleans and transforms it, and models the result into a star schema
+          ready for analytics.
+        </p>
+
+        <div class="tech-row">
+          <span class="tech-badge">SQL Server</span>
+          <span class="tech-badge">T-SQL</span>
+          <span class="tech-badge">ETL</span>
+          <span class="tech-badge">Data modeling</span>
+          <span class="tech-badge">Data warehousing</span>
+        </div>
+
+        <div class="project-links">
+          <a class="btn btn-primary btn-sm" href="#case-warehouse">
+            Read case study
+          </a>
+          <a
+            class="btn btn-secondary btn-sm"
+            href="https://github.com/MahmoudNashat950/sql-data-warehouse-project"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <span class="project-flag">Machine learning</span>
+        <h3>Credit Card Fraud Detection</h3>
+
+        <p class="project-desc">
+          A machine learning pipeline for detecting fraudulent transactions,
+          with a focus on class imbalance, feature preparation, and model
+          evaluation.
+        </p>
+
+        <div class="tech-row">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">NumPy</span>
+          <span class="tech-badge">Scikit-learn</span>
+          <span class="tech-badge">Matplotlib</span>
+        </div>
+
+        <div class="project-links">
+          <a
+            class="btn btn-secondary btn-sm"
+            href="https://github.com/MahmoudNashat950/credit_fraud_project"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <span class="project-flag">Machine learning</span>
+        <h3>NYC Taxi Trip Duration Prediction</h3>
+
+        <p class="project-desc">
+          A regression pipeline that predicts taxi trip duration using
+          engineered spatial and temporal features.
+        </p>
+
+        <div class="tech-row">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">NumPy</span>
+          <span class="tech-badge">Scikit-learn</span>
+          <span class="tech-badge">Matplotlib</span>
+        </div>
+
+        <div class="project-links">
+          <a
+            class="btn btn-secondary btn-sm"
+            href="https://github.com/MahmoudNashat950/Kaggle-New-York-City-Taxi-Trip-Duration"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <span class="project-flag">Software engineering</span>
+        <h3>Marketplace Platform</h3>
+
+        <p class="project-desc">
+          A full-stack marketplace built with a .NET Web API and React
+          frontend, covering authentication, JWT authorization, clean
+          architecture, and a relational data layer.
+        </p>
+
+        <div class="tech-row">
+          <span class="tech-badge">C#</span>
+          <span class="tech-badge">ASP.NET Core</span>
+          <span class="tech-badge">SQL Server</span>
+          <span class="tech-badge">EF Core</span>
+          <span class="tech-badge">JWT</span>
+          <span class="tech-badge">React</span>
+        </div>
+
+        <div class="project-links">
+          <a
+            class="btn btn-secondary btn-sm"
+            href="https://github.com/MahmoudNashat950/MarketplaceBackend"
+            target="_blank"
+            rel="noopener"
+          >
+            Backend
+          </a>
+          <a
+            class="btn btn-secondary btn-sm"
+            href="https://github.com/MahmoudNashat950/Ecommerce-frontend"
+            target="_blank"
+            rel="noopener"
+          >
+            Frontend
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
   <!-- CASE STUDIES -->
   <section id="case-studies">
